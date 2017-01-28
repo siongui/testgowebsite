@@ -7,6 +7,19 @@ export PATH := $(GOROOT)/bin:$(GOPATH)/bin:$(PATH)
 
 GO_VERSION=1.7.5
 DEV_DIR=../
+STATIC_WEBSITE_DIR=website
+
+devserver: fmt check_dir
+	@echo "\033[92mDevelopment Server Running ...\033[0m"
+	@go run server.go -dir=$(STATIC_WEBSITE_DIR)
+
+fmt:
+	@echo "\033[92mGo fmt source code...\033[0m"
+	@go fmt server.go
+
+check_dir:
+	@echo "\033[92mCreate website directory if not exists ...\033[0m"
+	@[ -d $(STATIC_WEBSITE_DIR) ] || mkdir -p $(STATIC_WEBSITE_DIR)
 
 update_ubuntu:
 	@echo "\033[92mUpdating Ubuntu ...\033[0m"
