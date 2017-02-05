@@ -11,7 +11,7 @@ STATIC_WEBSITE_DIR=website
 
 devserver: fmt check_dir
 	@echo "\033[92mDevelopment Server Running ...\033[0m"
-	@go run server.go -dir=$(STATIC_WEBSITE_DIR)
+	@go run server.go -dir=$(STATIC_WEBSITE_DIR) -port=8000
 
 fmt:
 	@echo "\033[92mGo fmt source code...\033[0m"
