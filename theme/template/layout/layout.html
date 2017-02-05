@@ -1,0 +1,19 @@
+{{- define "layout" -}}
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <title>วัดป่าโพธิญาณ</title>
+  <meta name="description" content="วัดป่าโพธิญาณ - สาขา 8 วัดหนองป่าพง">
+  <meta name="keywords" content="วัดเขื่อน">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{template "metaog" .}}
+</head>
+<body>
+
+{{block "content" .}}{{end}}
+
+{{template "footer" .}}
+</body>
+</html>
+{{- end -}}
