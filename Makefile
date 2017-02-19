@@ -9,7 +9,7 @@ GO_VERSION=1.7.5
 DEV_DIR=../
 STATIC_WEBSITE_DIR=website
 
-devserver: fmt check_dir
+devserver: check_dir test
 	@echo "\033[92mDevelopment Server Running ...\033[0m"
 	@go run devserver/server.go -dir=$(STATIC_WEBSITE_DIR) -port=8000
 
@@ -33,3 +33,10 @@ download_go:
 	@echo "\033[92mDownloading and Installing Go ...\033[0m"
 	@cd $(DEV_DIR) ; wget https://storage.googleapis.com/golang/go$(GO_VERSION).linux-amd64.tar.gz
 	@cd $(DEV_DIR) ; tar xvzf go$(GO_VERSION).linux-amd64.tar.gz
+
+install:
+	@echo "\033[92mInstalling Go template utility ...\033[0m"
+	go get -u github.com/siongui/gotemplateutil
+
+clean:
+	@rm -rf pkg/ src/ website/
