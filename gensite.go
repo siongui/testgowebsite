@@ -6,13 +6,7 @@ import (
 	"path"
 )
 
-type TemplateData struct {
-	OgImage  string
-	OgUrl    string
-	OgLocale string
-}
-
-func indexHtml(tmpldir, outputdir string) error {
+func indexHtml(tmpldir, outputdir string, data interface{}) error {
 	tmpl, err := tmplutil.ParseDirectory(tmpldir)
 	if err != nil {
 		return err
@@ -23,13 +17,7 @@ func indexHtml(tmpldir, outputdir string) error {
 		return err
 	}
 
-	data := TemplateData{
-		OgImage:  "https://upload.wikimedia.org/wikipedia/commons/d/df/Dharma_Wheel.svg",
-		OgUrl:    "https://siongui.github.io/wat-pah-photiyan/",
-		OgLocale: "th_TH",
-	}
-
-	tmpl.ExecuteTemplate(fo, "index.html", &data)
+	tmpl.ExecuteTemplate(fo, "index.html", data)
 
 	return nil
 }

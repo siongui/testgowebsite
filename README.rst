@@ -7,7 +7,7 @@ Create static website in Go_ programming language.
 Development Environment:
 
   - `Ubuntu 16.10`_
-  - `Go 1.7.5`_
+  - `Go 1.8`_
 
 
 Set Up Development Environment
@@ -78,7 +78,7 @@ References
 
 .. _Go: https://golang.org/
 .. _Ubuntu 16.10: http://releases.ubuntu.com/16.10/
-.. _Go 1.7.5: https://golang.org/dl/
+.. _Go 1.8: https://golang.org/dl/
 .. _git clone: https://www.google.com/search?q=git+clone
 .. _UNLICENSE: http://unlicense.org/
 .. _go-libsass: https://github.com/wellington/go-libsass
