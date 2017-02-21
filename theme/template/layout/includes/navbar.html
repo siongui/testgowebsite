@@ -1,0 +1,37 @@
+{{- define "navbar" -}}
+<style>
+@media screen and (max-width: 768px) {
+  #menu-toggle:checked + #menu {
+    display: block;
+  }
+}
+</style>
+
+<nav class="nav">
+  <div class="nav-left">
+    <a class="nav-item">
+      วัดป่าโพธิญาณ (วัดเขื่อน)
+    </a>
+  </div>
+
+  <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+  <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+  <label for="menu-toggle" class="nav-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <input type="checkbox" id="menu-toggle" class="is-hidden"/>
+
+  <!-- This "nav-menu" is hidden on mobile -->
+  <!-- Add the modifier "is-active" to display it on mobile -->
+  <div id="menu" class="nav-right nav-menu">
+    <a class="nav-item">
+      หลวงปู่ชา
+    </a>
+    <a class="nav-item">
+      หลวงพ่อบุญชู
+    </a>
+  </div>
+</nav>
+{{- end -}}

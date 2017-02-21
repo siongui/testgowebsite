@@ -72,9 +72,21 @@ References
 
 .. [5] | `Pure <http://purecss.io/>`_
        | `Bulma: a modern CSS framework based on Flexbox <http://bulma.io/>`_
+       |   - `bulma themes - Google search <https://www.google.com/search?q=bulma+themes>`_
+       |   - `Free Bulma templates <https://dansup.github.io/bulma-templates/>`_
        | `Basscss <http://basscss.com/>`_
 
 .. [6] `GitHub - siongui/gotemplateutil: utility for Go template <https://github.com/siongui/gotemplateutil>`_
+
+.. [7] | `菩提智 阿姜查 - Google search <https://www.google.com/search?q=%E8%8F%A9%E6%8F%90%E6%99%BA+%E9%98%BF%E5%A7%9C%E6%9F%A5>`_
+       | `菩提智 阿姜查 - DuckDuckGo search <https://duckduckgo.com/?q=%E8%8F%A9%E6%8F%90%E6%99%BA+%E9%98%BF%E5%A7%9C%E6%9F%A5>`_
+       | `菩提智 阿姜查 - Ecosia search <https://www.ecosia.org/search?q=%E8%8F%A9%E6%8F%90%E6%99%BA+%E9%98%BF%E5%A7%9C%E6%9F%A5>`_
+       | `菩提智 阿姜查 - Bing search <https://www.bing.com/search?q=%E8%8F%A9%E6%8F%90%E6%99%BA+%E9%98%BF%E5%A7%9C%E6%9F%A5>`_
+       | `菩提智 阿姜查 - Yahoo search <https://search.yahoo.com/search?p=%E8%8F%A9%E6%8F%90%E6%99%BA+%E9%98%BF%E5%A7%9C%E6%9F%A5>`_
+       | `菩提智 阿姜查 - Baidu search <https://www.baidu.com/s?wd=%E8%8F%A9%E6%8F%90%E6%99%BA+%E9%98%BF%E5%A7%9C%E6%9F%A5>`_
+       | `菩提智 阿姜查 - Yandex search <https://www.yandex.com/search/?text=%E8%8F%A9%E6%8F%90%E6%99%BA+%E9%98%BF%E5%A7%9C%E6%9F%A5>`_
+
+.. [8] `純CSS可切換選單 <https://siongui.github.io/zh/2017/02/21/css-only-toggle-menu/>`_
 
 .. _Go: https://golang.org/
 .. _Ubuntu 16.10: http://releases.ubuntu.com/16.10/
