@@ -88,6 +88,17 @@ References
 
 .. [8] `純CSS可切換選單 <https://siongui.github.io/zh/2017/02/21/css-only-toggle-menu/>`_
 
+.. [9] | `golang yaml - Google search <https://www.google.com/search?q=golang+yaml>`_
+       | `golang yaml - DuckDuckGo search <https://duckduckgo.com/?q=golang+yaml>`_
+       | `golang yaml - Ecosia search <https://www.ecosia.org/search?q=golang+yaml>`_
+       | `golang yaml - Qwant search <https://www.qwant.com/?q=golang+yaml>`_
+       | `golang yaml - Bing search <https://www.bing.com/search?q=golang+yaml>`_
+       | `golang yaml - Yahoo search <https://search.yahoo.com/search?p=golang+yaml>`_
+       | `golang yaml - Baidu search <https://www.baidu.com/s?wd=golang+yaml>`_
+       | `golang yaml - Yandex search <https://www.yandex.com/search/?text=golang+yaml>`_
+
+.. [10] `GitHub - ghodss/yaml: A better way to marshal and unmarshal YAML in Golang <https://github.com/ghodss/yaml>`_
+
 .. _Go: https://golang.org/
 .. _Ubuntu 16.10: http://releases.ubuntu.com/16.10/
 .. _Go 1.8: https://golang.org/dl/

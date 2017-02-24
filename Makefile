@@ -37,6 +37,7 @@ download_go:
 install:
 	@echo "\033[92mInstalling Go template utility ...\033[0m"
 	go get -u github.com/siongui/gotemplateutil
+	go get -u github.com/ghodss/yaml
 
 clean:
 	@rm -rf pkg/ src/ website/
