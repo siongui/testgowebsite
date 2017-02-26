@@ -41,7 +41,10 @@ download_go:
 install:
 	@echo "\033[92mInstalling Go template utility ...\033[0m"
 	go get -u github.com/siongui/gotemplateutil
+	@echo "\033[92mInstalling YAML parser ...\033[0m"
 	go get -u github.com/ghodss/yaml
+	@echo "\033[92mInstalling goquery (HTML parser) ...\033[0m"
+	go get -u github.com/PuerkitoBio/goquery
 
 clean_static_site:
 	@echo "\033[92mRemove static site ...\033[0m"
