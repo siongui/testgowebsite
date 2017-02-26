@@ -9,11 +9,11 @@ GO_VERSION=1.7.5
 DEV_DIR=../
 STATIC_WEBSITE_DIR=website
 
-devserver: check_dir test
+devserver: test
 	@echo "\033[92mDevelopment Server Running ...\033[0m"
 	@go run devserver/server.go -dir=$(STATIC_WEBSITE_DIR) -port=8000
 
-test: fmt
+test: fmt check_dir
 	@go test -v
 
 fmt:
@@ -24,6 +24,10 @@ fmt:
 check_dir:
 	@echo "\033[92mCreate website directory if not exists ...\033[0m"
 	@[ -d $(STATIC_WEBSITE_DIR) ] || mkdir -p $(STATIC_WEBSITE_DIR)
+
+github_pages: clean_static_site test
+	@echo "\033[92mPublish to GitHub Pages ...\033[0m"
+	ghp-import $(STATIC_WEBSITE_DIR); git push origin gh-pages
 
 update_ubuntu:
 	@echo "\033[92mUpdating Ubuntu ...\033[0m"
@@ -39,5 +43,9 @@ install:
 	go get -u github.com/siongui/gotemplateutil
 	go get -u github.com/ghodss/yaml
 
-clean:
-	@rm -rf pkg/ src/ website/
+clean_static_site:
+	@echo "\033[92mRemove static site ...\033[0m"
+	@rm -rf $(STATIC_WEBSITE_DIR)
+
+clean: clean_static_site
+	@rm -rf pkg/ src/
