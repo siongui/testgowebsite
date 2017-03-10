@@ -99,7 +99,8 @@ References
 
 .. [10] `GitHub - ghodss/yaml: A better way to marshal and unmarshal YAML in Golang <https://github.com/ghodss/yaml>`_
 
-.. [11] `งานมุฑิตาสักการะ - หลวงพ่อคำ นิสโสโก - วัดป่าไทยพัฒนา <https://www.facebook.com/Kottapan.Kaewsanga/posts/10211985490423478>`_
+.. [11] | `งานมุฑิตาสักการะ - หลวงพ่อคำ นิสโสโก - วัดป่าไทยพัฒนา <https://www.facebook.com/Kottapan.Kaewsanga/posts/10211985490423478>`_
+        | `เอนก ยสทินฺโน <https://www.facebook.com/Kottapan.Kaewsanga/posts/10212104349114871>`_
 
 .. _Go: https://golang.org/
 .. _Ubuntu 16.10: http://releases.ubuntu.com/16.10/
