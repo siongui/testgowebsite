@@ -31,11 +31,11 @@ func IsHtml(info os.FileInfo) bool {
 	return strings.HasSuffix(info.Name(), ".html")
 }
 
-func ParseContent(dir string) {
+func ParseContentDir(dir string) {
 	// walk all files in directory
 	filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
 		if IsHtml(info) {
-			println(path)
+			ParseHtmlContent(path)
 		}
 		return nil
 	})

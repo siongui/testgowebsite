@@ -15,5 +15,5 @@ func TestGensite(t *testing.T) {
 		t.Error(err)
 	}
 
-	ParseContent("content")
+	ParseContentDir("content")
 }
