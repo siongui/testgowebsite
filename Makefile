@@ -26,6 +26,8 @@ check_dir:
 	@[ -d $(STATIC_WEBSITE_DIR) ] || mkdir -p $(STATIC_WEBSITE_DIR)
 
 github_pages: clean_static_site test
+	@echo "\033[92mCreate CNAME for GitHub Pages custom domain ...\033[0m"
+	@echo "watpahphotiyan.online-dhamma.net" > $(STATIC_WEBSITE_DIR)/CNAME
 	@echo "\033[92mPublish to GitHub Pages ...\033[0m"
 	ghp-import $(STATIC_WEBSITE_DIR); git push origin gh-pages
 
