@@ -1,27 +1,27 @@
 package gensite
 
 import (
-	tmplutil "github.com/siongui/gotemplateutil"
+	"github.com/siongui/gotm"
 	"os"
 	"path"
 	"path/filepath"
 	"strings"
 )
 
-func indexHtml(tmpldir, outputdir string, data interface{}) error {
-	tmpl, err := tmplutil.ParseDirectory(tmpldir)
+func indexHtml(tmpldir, outputdir string, data interface{}) (err error) {
+	tm := gotm.NewTemplateManager("")
+	err = tm.ParseDirectory(tmpldir)
 	if err != nil {
-		return err
+		return
 	}
 
 	fo, err := os.Create(path.Join(outputdir, "index.html"))
 	if err != nil {
 		return err
 	}
+	defer fo.Close()
 
-	tmpl.ExecuteTemplate(fo, "index.html", data)
-
-	return nil
+	return tm.ExecuteTemplate(fo, "index.html", data)
 }
 
 func IsHtml(info os.FileInfo) bool {

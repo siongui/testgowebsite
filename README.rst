@@ -7,7 +7,7 @@ Create static website in Go_ programming language.
 Development Environment:
 
   - `Ubuntu 16.10`_
-  - `Go 1.8`_
+  - `Go 1.8.1`_
 
 
 Set Up Development Environment
@@ -76,7 +76,7 @@ References
        |   - `Free Bulma templates <https://dansup.github.io/bulma-templates/>`_
        | `Basscss <http://basscss.com/>`_
 
-.. [6] `GitHub - siongui/gotemplateutil: utility for Go template <https://github.com/siongui/gotemplateutil>`_
+.. [6] `GitHub - siongui/gotm: Go template manager <https://github.com/siongui/gotm>`_
 
 .. [7] | `菩提智 阿姜查 - Google search <https://www.google.com/search?q=%E8%8F%A9%E6%8F%90%E6%99%BA+%E9%98%BF%E5%A7%9C%E6%9F%A5>`_
        | `菩提智 阿姜查 - DuckDuckGo search <https://duckduckgo.com/?q=%E8%8F%A9%E6%8F%90%E6%99%BA+%E9%98%BF%E5%A7%9C%E6%9F%A5>`_
@@ -104,7 +104,7 @@ References
 
 .. _Go: https://golang.org/
 .. _Ubuntu 16.10: http://releases.ubuntu.com/16.10/
-.. _Go 1.8: https://golang.org/dl/
+.. _Go 1.8.1: https://golang.org/dl/
 .. _git clone: https://www.google.com/search?q=git+clone
 .. _UNLICENSE: http://unlicense.org/
 .. _go-libsass: https://github.com/wellington/go-libsass

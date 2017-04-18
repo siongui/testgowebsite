@@ -41,8 +41,8 @@ download_go:
 	@cd $(DEV_DIR) ; tar xvzf go$(GO_VERSION).linux-amd64.tar.gz
 
 install:
-	@echo "\033[92mInstalling Go template utility ...\033[0m"
-	go get -u github.com/siongui/gotemplateutil
+	@echo "\033[92mInstalling Go template manager ...\033[0m"
+	go get -u github.com/siongui/gotm
 	@echo "\033[92mInstalling YAML parser ...\033[0m"
 	go get -u github.com/ghodss/yaml
 	@echo "\033[92mInstalling goquery (HTML parser) ...\033[0m"
