@@ -102,6 +102,9 @@ References
 .. [11] | `งานมุฑิตาสักการะ - หลวงพ่อคำ นิสโสโก - วัดป่าไทยพัฒนา <https://www.facebook.com/Kottapan.Kaewsanga/posts/10211985490423478>`_
         | `เอนก ยสทินฺโน <https://www.facebook.com/Kottapan.Kaewsanga/posts/10212104349114871>`_
 
+.. [12] | `นักรบ แห่งพุทธะ - พระอริยสงฆ์แห่งเมืองดอกบัวงาม... | Facebook <https://www.facebook.com/permalink.php?story_fbid=1961150254121265&id=100006789289467>`_
+        | `นักรบ แห่งพุทธะ - หลวงพ่อบุญชู ฐิตคุโณ วัดป่าโพธิญาณ... | Facebook <https://www.facebook.com/photo.php?fbid=1961150117454612&set=a.1508900606012901.1073741829.100006789289467&type=3>`_
+
 .. _Go: https://golang.org/
 .. _Ubuntu 16.10: http://releases.ubuntu.com/16.10/
 .. _Go 1.8.1: https://golang.org/dl/
