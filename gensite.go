@@ -8,6 +8,21 @@ import (
 	"strings"
 )
 
+func GenerateStaticSite(configPath string) (err error) {
+	config, err := ReadConfigFromYaml(configPath)
+	if err != nil {
+		return
+	}
+
+	err = indexHtml(config.TemplateDir, config.OutputDir, &config)
+	if err != nil {
+		return
+	}
+
+	ParseContentDir(config.ContentDir)
+	return
+}
+
 func indexHtml(tmpldir, outputdir string, data interface{}) (err error) {
 	tm := gotm.NewTemplateManager("")
 	err = tm.ParseDirectory(tmpldir)
