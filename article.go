@@ -6,6 +6,7 @@ type Article struct {
 	Author       string
 	Category     string
 	Tags         string
+	Date         string
 	Summary      string
 	Title        string
 	Content      string
