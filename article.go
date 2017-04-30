@@ -7,6 +7,8 @@ type Article struct {
 	Category     string
 	Tags         string
 	Date         string
+	Slug         string
+	Lang         string
 	Summary      string
 	Title        string
 	Content      string

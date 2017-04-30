@@ -41,6 +41,22 @@ func ParseHtmlContent(path string) (article Article, err error) {
 			println("this should not happen")
 		}
 		println(content)
+
+		switch name {
+		case "slug":
+			article.Slug = content
+		case "tags":
+			article.Tags = content
+		case "date":
+			article.Date = content
+		case "lang":
+			article.Lang = content
+		case "category":
+			article.Category = content
+		case "summary":
+			article.Summary = content
+		default:
+		}
 	})
 
 	article.Content, err = doc.Find("body").Html()
