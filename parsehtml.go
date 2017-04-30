@@ -5,15 +5,22 @@ import (
 	"os"
 )
 
-func ParseHtmlContent(path string) (err error) {
-	f, err := os.Open(path)
+func ParseHtmlContent(path string) (article Article, err error) {
+	article.SourcePath = path
+	f, err := os.Open(article.SourcePath)
 	if err != nil {
 		return
 	}
 	defer f.Close()
 
 	doc, err := goquery.NewDocumentFromReader(f)
-	println(doc.Text())
+	if err != nil {
+		return
+	}
+	article.Content, err = doc.Find("body").Html()
+	if err != nil {
+		return
+	}
 
 	return
 }
