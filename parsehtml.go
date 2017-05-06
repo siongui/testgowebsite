@@ -55,6 +55,8 @@ func ParseHtmlContent(path string) (article Article, err error) {
 			article.Category = content
 		case "summary":
 			article.Summary = content
+		case "og:image":
+			article.OgImage = content
 		default:
 		}
 	})

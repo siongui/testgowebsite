@@ -15,4 +15,5 @@ type Article struct {
 	Url          string
 	Translations []*Article
 	SourcePath   string
+	OgImage      string
 }

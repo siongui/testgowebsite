@@ -6,7 +6,7 @@ Create static website in Go_ programming language.
 
 Development Environment:
 
-  - `Ubuntu 16.10`_
+  - `Ubuntu 17.04`_
   - `Go 1.8.1`_
 
 
@@ -106,7 +106,7 @@ References
         | `นักรบ แห่งพุทธะ - หลวงพ่อบุญชู ฐิตคุโณ วัดป่าโพธิญาณ... | Facebook <https://www.facebook.com/photo.php?fbid=1961150117454612&set=a.1508900606012901.1073741829.100006789289467&type=3>`_
 
 .. _Go: https://golang.org/
-.. _Ubuntu 16.10: http://releases.ubuntu.com/16.10/
+.. _Ubuntu 17.04: http://releases.ubuntu.com/17.04/
 .. _Go 1.8.1: https://golang.org/dl/
 .. _git clone: https://www.google.com/search?q=git+clone
 .. _UNLICENSE: http://unlicense.org/
