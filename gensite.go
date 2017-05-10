@@ -36,7 +36,8 @@ func indexHtml(tmpldir, outputdir string, data interface{}) (err error) {
 	}
 	defer fo.Close()
 
-	return tm.ExecuteTemplate(fo, "index.html", data)
+	err = tm.ExecuteTemplate(fo, "index.html", data)
+	return
 }
 
 func IsHtml(info os.FileInfo) bool {
