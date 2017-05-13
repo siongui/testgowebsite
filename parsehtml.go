@@ -24,23 +24,14 @@ func ParseHtmlContent(path string) (article Article, err error) {
 
 	doc.Find("head > meta").Each(func(i int, s *goquery.Selection) {
 		name, ok := s.Attr("name")
-		if ok {
-			print(name)
-		} else {
-			outerhtml, err := goquery.OuterHtml(s)
-			if err != nil {
-				println(err)
-			}
-			println(outerhtml)
+		if !ok {
 			return
 		}
 
-		print(" : ")
 		content, ok := s.Attr("content")
 		if !ok {
-			println("this should not happen")
+			return
 		}
-		println(content)
 
 		switch name {
 		case "slug":

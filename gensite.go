@@ -30,7 +30,12 @@ func GenerateStaticSite(configPath string) {
 
 	paths := GetAllFilePathsInContentDir(config.ContentDir)
 	for _, path := range paths {
-		ParseHtmlContent(path)
+		article, err := ParseHtmlContent(path)
+		if err != nil {
+			log.Println(err)
+			continue
+		}
+		log.Println(article)
 	}
 }
 
