@@ -28,7 +28,10 @@ func GenerateStaticSite(configPath string) {
 		log.Println(err)
 	}
 
-	ParseContentDir(config.ContentDir)
+	paths := GetAllFilePathsInContentDir(config.ContentDir)
+	for _, path := range paths {
+		ParseHtmlContent(path)
+	}
 }
 
 func outputHtml(tm *gotm.TemplateManager, tmplname, path string, data interface{}) (err error) {
@@ -49,12 +52,20 @@ func IsHtml(info os.FileInfo) bool {
 	return strings.HasSuffix(info.Name(), ".html")
 }
 
-func ParseContentDir(dir string) {
+func GetAllFilePathsInContentDir(dir string) (paths []string) {
 	// walk all files in directory
 	filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
-		if IsHtml(info) {
-			ParseHtmlContent(path)
+		if err != nil {
+			log.Println(err)
+			return nil
 		}
+
+		if IsHtml(info) {
+			paths = append(paths, path)
+		}
+
 		return nil
 	})
+
+	return
 }
