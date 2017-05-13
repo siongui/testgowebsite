@@ -5,8 +5,5 @@ import (
 )
 
 func TestGensite(t *testing.T) {
-	err := GenerateStaticSite("siteconf.yaml")
-	if err != nil {
-		t.Error(err)
-	}
+	GenerateStaticSite("siteconf.yaml")
 }

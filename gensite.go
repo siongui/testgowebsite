@@ -2,41 +2,43 @@ package gensite
 
 import (
 	"github.com/siongui/gotm"
+	"log"
 	"os"
 	"path"
 	"path/filepath"
 	"strings"
 )
 
-func GenerateStaticSite(configPath string) (err error) {
+func GenerateStaticSite(configPath string) {
 	config, err := ReadConfigFromYaml(configPath)
 	if err != nil {
-		return
+		log.Panic(err)
 	}
 
-	err = indexHtml(config.TemplateDir, config.OutputDir, &config)
+	tm := gotm.NewTemplateManager("")
+	err = tm.ParseDirectory(config.TemplateDir)
 	if err != nil {
-		return
+		log.Panic(err)
+	}
+
+	// create {{SITEURL}}/index.html
+	rootIndexPath := path.Join(config.OutputDir, "index.html")
+	err = outputHtml(tm, "index.html", rootIndexPath, &config)
+	if err != nil {
+		log.Println(err)
 	}
 
 	ParseContentDir(config.ContentDir)
-	return
 }
 
-func indexHtml(tmpldir, outputdir string, data interface{}) (err error) {
-	tm := gotm.NewTemplateManager("")
-	err = tm.ParseDirectory(tmpldir)
-	if err != nil {
-		return
-	}
-
-	fo, err := os.Create(path.Join(outputdir, "index.html"))
+func outputHtml(tm *gotm.TemplateManager, tmplname, path string, data interface{}) (err error) {
+	fo, err := os.Create(path)
 	if err != nil {
 		return err
 	}
 	defer fo.Close()
 
-	err = tm.ExecuteTemplate(fo, "index.html", data)
+	err = tm.ExecuteTemplate(fo, tmplname, data)
 	return
 }
 
