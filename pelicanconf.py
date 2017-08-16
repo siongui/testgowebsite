@@ -104,7 +104,9 @@ def hidden_pages_get_page_with_slug_index(hidden_pages):
 # custom Jinja2 filter for localizing theme
 def gettext(string, lang):
     if lang == "en":
-        return string
+        if string == "วัดป่าโพธิญาณ": return "Wat Pah Photiyan"
+        elif string == "วัดเขื่อน - สาขา 8 วัดหนองป่าพง": return "Dam Monastery - Branch #8 of Wat Nong Pah Pong"
+        else: return string
     elif lang == "zh":
         if string == "Archives": return "歸檔"
         elif string == "Categories": return "分類"
@@ -115,6 +117,8 @@ def gettext(string, lang):
         elif string == "Updated": return "更新"
         elif string == "Translation(s)": return "翻譯"
         elif string == "Edit on Github": return "在Github上編輯"
+        elif string == "วัดป่าโพธิญาณ": return "菩提智叢林道場"
+        elif string == "วัดเขื่อน - สาขา 8 วัดหนองป่าพง": return "水壩道場 - 巴蓬寺第八分院"
         else: return string
     elif lang == "th":
         if string == "Archives": return "สารบรรณ"

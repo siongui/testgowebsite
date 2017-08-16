@@ -8,7 +8,7 @@
 {%- from 'layout/includes/i18n.html' import translations_for, lang_code2name -%}
 {%- from 'layout/includes/time.html' import Gregorian_calendar -%}
 <!DOCTYPE html>
-<html lang="{{ DEFAULT_LANG }}">
+<html lang="{{ DEFAULT_LANG }}" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="utf-8">
   <title>{%- block title -%}{{ SITENAME }}{%- endblock -%}</title>
@@ -20,11 +20,26 @@
   {%- if OG_DESCRIPTION -%}<meta property="og:description" content="{{ OG_DESCRIPTION }}" />{%- endif -%}
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.css" integrity="sha256-KGzlh3GrZQG1IDswBxp0OXmxeb7h0WezxI8tXeGr3yc=" crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ relpath_to_site(DEFAULT_LANG, main_lang) }}/theme/css/style.css">
 </head>
 <body>
 {% include 'layout/includes/top_nav.html' %}
 {% if GOOGLE_CSE %}<gcse:search></gcse:search>{% endif %}
+
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        {{ 'วัดป่าโพธิญาณ'|gettext(DEFAULT_LANG) }}</a>
+      </h1>
+      <h2 class="subtitle">
+        {{ 'วัดเขื่อน - สาขา 8 วัดหนองป่าพง'|gettext(DEFAULT_LANG) }}</a>
+      </h2>
+    </div>
+  </div>
+</section>
+
 {%- block content -%}{%- endblock -%}
 {% include 'layout/includes/footer.html' %}
 {% include 'layout/includes/cse.html' %}

@@ -83,13 +83,6 @@ Daily Development
     # open your browser and preview the website at http://localhost:8000/
 
 
-UNLICENSE
----------
-
-All works, including posts and code, of Siong-Ui Te are released in public domain.
-Please see UNLICENSE_.
-
-
 References
 ----------
 
